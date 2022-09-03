@@ -37,6 +37,7 @@ public class CRC {
             sendcode[i] = sc.nextInt();
         }
         receiveData(bits, div);
+        sc.close();
 
     }
 
@@ -86,3 +87,23 @@ public class CRC {
         System.out.println("Data received without any error..");
     }
 }
+
+/*
+ * ALGORITHM FOR CRC ERROR DETECTION
+ * 
+ * 1. start
+ * 2. Accept the data to be sent
+ * 3. Accept the divisor
+ * 4. Append (length(divisor)-1) zeros to data to be sent
+ * 5. using binary division divide the data with the divisor
+ * 6. now replace the appended zeros by the remainder of the division.
+ * 7. Send the obtained data in step 6 along with divisor to the receiver.
+ * 8. At the receiver's end again divide the received data with the
+ * divisor
+ * 9. if the remainder of this division is zero then the data received is
+ * without any errors.
+ * 10. Else if the remiander is not zero then an error has occured during
+ * the
+ * transmission.
+ * 11. Stop
+ */
