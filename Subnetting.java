@@ -49,7 +49,7 @@ public class Subnetting {
 
 }
 
-/*
+/*  ALGORITHM
  * 1. Start
  * 2. Accept IP address
  * 3. Based on the first part of the IP address classify it into
